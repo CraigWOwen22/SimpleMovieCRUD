@@ -14,8 +14,14 @@ class MovieController{
   def searchMovie ={
       println "Entering Search"
       def movie = movieService.searchM(params.title)
-      println "M" + movie
-      redirect action: "show", id: movie.id
+  
+      if(movie == null){
+          redirect action: "search"
+      }
+      else{
+          redirect action: "show", id: movie.id
+      }
+      
    }
   
 
