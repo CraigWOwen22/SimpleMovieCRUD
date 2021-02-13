@@ -1,0 +1,15 @@
+--Dec 6th--
+
+-"https://docs.huihoo.com/grails/3.3.x/guide/index.html" - The Grails Framework guide is very helpful
+
+- "https://grails.github.io/grails2-doc/2.5.4/guide/GORM.html" - Also vey helpful when it comes to learning the framework
+
+-Read through this "https://docs.huihoo.com/grails/3.3.x/ref/Domain%20Classes/findAllBy.html" to learn about Dynamic finders and explore the possibility of using SQL instead.
+
+-GORM classes also support Hibernate’s query language HQL, a very complete reference for which can be found in the Hibernate documentation of the Hibernate documentation.
+
+-GORM provides a number of methods that work with HQL including find, findAll and executeQuery.
+
+- "https://stackoverflow.com/questions/39530094/which-is-a-efficient-way-to-query-a-database-in-grails-sql-hql-or-gorm" Look at the difference between GORM, SQL and HQL
+
+- Changes to the code were committed locally but not pushed to remote!

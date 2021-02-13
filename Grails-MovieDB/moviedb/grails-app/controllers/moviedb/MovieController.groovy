@@ -9,16 +9,27 @@ class MovieController{
   }
 
   def create = {}
+  def search = {}
+  
+  def searchMovie ={
+      println "Entering Search"
+      def movie = movieService.searchM(params.title)
+      println "M" + movie
+      redirect action: "show", id: movie.id
+   }
+  
 
   def save = {
-
+    println "Entering Save"
     def movie = movieService.saveMovie(params.title, params.genre, params.rating.toInteger())
     redirect action: "show", id: movie.id
   }
 
+
   def edit = {
-    def movie = Movie.get(params.id)
-    [movie:movie]
+    def movie = movieService.getMovie(params.id.toInteger())
+    // def movie = Movie.get(params.id)
+    [movie: movie]
   }
 
   def update ={
@@ -26,20 +37,16 @@ class MovieController{
     redirect action: "show", id: movie.id
   }
 
-  // def update = {
-  // def movie = Movie.get(params.id)
-  // movie.properties = params
-  // movie.save flush: true, failOnError: true
-  // redirect action: "show", id: params.id
-  // }
-
   def show = {
-    def movie = Movie.get(params.id)
+    def movie = movieService.getMovie(params.id.toInteger())
+    // def movie = Movie.get(params.id)
     [movie: movie]
   }
 
   def list = {
-    def movies = Movie.list()
+    println "Entering List"
+    def movies = movieService.getMovies()
+    // def movies = Movie.list()
     [movies: movies]
   }
 
@@ -50,5 +57,7 @@ class MovieController{
     // movie.delete flush: true, failOnError: true
      redirect action: "index"
   }
+  
+
 
 }

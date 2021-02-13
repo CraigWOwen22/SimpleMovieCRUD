@@ -26,6 +26,27 @@ class MovieService {
       return movie
     }
 
+    def getMovie(Integer id){
+      Movie movie = Movie.get(id)
+    }
+
+    def getMovies(){
+      Movie.list()
+    }
+    
+    def searchM(String movieTitle){
+      Movie movie = Movie.find("from Movie as m where m.title='" + movieTitle + "'")
+      println "MOVIE: $movie"
+      println "movietitle" + movieTitle
+       
+      return movie
+        
+    }
+    
+    
+    
+    
+
 
 
 
