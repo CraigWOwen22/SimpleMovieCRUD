@@ -13,3 +13,12 @@
 - "https://stackoverflow.com/questions/39530094/which-is-a-efficient-way-to-query-a-database-in-grails-sql-hql-or-gorm" Look at the difference between GORM, SQL and HQL
 
 - Changes to the code were committed locally but not pushed to remote!
+
+
+TODO
+
+- Try to change the serach feature so that the GSP is not handling it
+
+- URL Mappings
+
+

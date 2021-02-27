@@ -16,7 +16,9 @@ class MovieController{
       def movie = movieService.searchM(params.title)
   
       if(movie == null){
-          redirect action: "search"
+//          <g:javascript>alert('hello')</g:javascript>
+//          redirect action: "search"
+           render view:'search.gsp', model:[movieResult : "failed"]
       }
       else{
           redirect action: "show", id: movie.id
