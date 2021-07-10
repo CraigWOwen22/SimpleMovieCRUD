@@ -28,12 +28,14 @@
                  <td>${movie.rating}</td>
             
                 <td>
-                <g:link action="show"
-                id="${movie.id}">Show</g:link><br />
+                <g:link action="show" id="${movie.id}">   
+                    <input type="button" value="show" class="button">
+                </g:link>
+                <br/>
                 <g:link action="edit"
-                id="${movie.id}">Edit</g:link><br />
+                id="${movie.id}">Edit</g:link><br/>
                 <g:link action="delete"
-                id="${movie.id}">Delete</g:link><br /><br />
+                id="${movie.id}">Delete</g:link><br/><br/>
                 </td>
             </tr>
          
